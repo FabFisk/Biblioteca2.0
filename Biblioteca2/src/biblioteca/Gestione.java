@@ -54,4 +54,51 @@ public class Gestione {
 		
 		return token;
 	}
+	
+	
+	
+	public boolean restituisciLibro(Biblioteca b, String serialNum, String cf){
+		boolean token=false;
+		
+		Libro l=null;
+		l= b.getLibri().get(serialNum);
+		Utente u=null;
+		u = b.getUtenti().get(cf);
+		
+		if(l!=null && u!=null && b.getPrestiti().containsKey(cf+" "+serialNum)){
+			for(Map.Entry<String, Prestito> p : b.getPrestiti().entrySet()){
+				if(p.getValue().getL().equals(l)
+						&& p.getValue().getU().equals(u)
+						&& p.getValue().getRestituzione()==null){
+					Date today = new Date();
+					Prestito P = b.getPrestiti().get(cf+" "+serialNum);
+					P.setRestituzione(today);
+					token = true;
+					break;
+				}
+			}
+		}		
+		return token;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

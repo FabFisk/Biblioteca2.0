@@ -9,6 +9,7 @@ public class Biblioteca implements Validate {
 	private String nome;
 	private Map<String, Libro> libri = new HashMap<String, Libro>();
 	private Map<String, Utente> utenti = new HashMap<String, Utente>();
+	private Map<String, Prestito> prestiti = new HashMap<String, Prestito>();
 	
 
 	public Biblioteca (){}
@@ -34,11 +35,16 @@ public class Biblioteca implements Validate {
 	public void setUtenti(Map<String, Utente> utenti) {
 		this.utenti = utenti;
 	}
+	public Map<String, Prestito> getPrestiti() {
+		return prestiti;
+	}
+	public void setPrestiti(Map<String, Prestito> prestiti) {
+		this.prestiti = prestiti;
+	}
 	
 	
 	
-	
-	
+	//ausiliari
 	public void aggiungiUtente(Utente u){
 		this.utenti.put(u.getCf(), u);
 	}
@@ -55,4 +61,5 @@ public class Biblioteca implements Validate {
 		}
 		return token;
 	}
+
 }

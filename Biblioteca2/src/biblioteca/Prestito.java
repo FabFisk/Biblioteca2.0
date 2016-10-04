@@ -11,6 +11,12 @@ public class Prestito {
 	private Date scadenza;
 	
 	public Prestito(){}
+	public Prestito(Utente u, Libro l, Date prestito, Date scadenza){
+		this.l = l;
+		this.u = u;
+		this.prestito = prestito;
+		this.scadenza = scadenza;		
+	}
 	public Prestito(Utente u, Libro l, Date prestito, 
 			Date restituzione, Date scadenza){
 		this.l = l;
