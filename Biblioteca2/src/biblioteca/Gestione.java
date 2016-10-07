@@ -48,10 +48,11 @@ public class Gestione {
 			Calendar cal = utilDateToCalendar(today);
 			cal.add(Calendar.DATE, 14);
 			Date dataScadenza = cal.getTime();
-			
-			
+			Prestito p = new Prestito(u, l, today, dataScadenza);
+			b.getPrestiti().put(u.getCf()+"-"+l.getSerialNum(), p);
+			u.aggiungiLibro(l);
+			token = true;
 		}		
-		
 		return token;
 	}
 	
