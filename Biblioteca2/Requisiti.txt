@@ -1,0 +1,15 @@
+Biblioteca
+R1: 
+ Definire una classe Utente avente un nome, un cognome e un codice fiscale. L'utente deve avere anche un insieme di libri che ha preso in prestito. 
+R2:
+Definire una classe Libro avente l'autore, il titolo, il numero seriale, il numero di copie totali e il numero di copie disponibili.
+R3: 
+Definire una classe Biblioteca avente il nome della biblioteca, l'insieme degli utenti registrati e l'insieme dei libri.
+R4:
+Definire una classe Presito contenente il libro preso in prestito, l'utente che lo ha preso e la data in cui il prestito è stato concesso.
+R5:
+Definire una classe Gestione contenente i metodi che permettono di gestire la biblioteca ovvero:
+1.	un metodo per registrare un numero di copie qualsiasi all'interno della biblioteca, le copie disponibili e totali devono essere ogni volta aggiornate;
+2.	un metodo per registrare l'utente, nel caso in cui l'utente fosse già registrato deve lanciare un'eccezione;
+3.	un metodo per chiedere in prestito un libro. Il metodo ritorna true solo se vi sono copie disponibili in biblioteca, l'utente è iscritto alla biblioteca, non ha già tre prestiti attivi e non ha prestiti scaduti. 
+4.	un metodo per restituire un libro alla biblioteca. Il metodo ritorna true solo se il libro e l'utente sono registrati nella biblioteca e l'utente ha effettivamente quel libro in prestito.
