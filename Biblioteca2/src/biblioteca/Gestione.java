@@ -51,6 +51,7 @@ public class Gestione {
 			Prestito p = new Prestito(u, l, today, dataScadenza);
 			b.getPrestiti().put(u.getCf()+"-"+l.getSerialNum(), p);
 			u.aggiungiLibro(l);
+			l.setCopieDisp(l.getCopieDisp()-1);
 			token = true;
 		}		
 		return token;
